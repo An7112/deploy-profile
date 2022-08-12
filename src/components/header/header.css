@@ -1,0 +1,86 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 8.4rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary);
+}
+
+.me {
+    border-radius: 2rem;
+    width: 36rem;
+    height: 30rem;
+    position: absolute;
+    left:calc(50% - 18rem);
+    margin-top: 4rem;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.me .swiper{
+    border: 5px solid var(--color-primary);
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 10.1rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:1024px) {
+    header {
+        height: 68vh;
+    }
+    .me{
+        left: 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header__socials,
+    .scroll__down {
+        display: none;
+    }
+}
